@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 application: snakebbss
 version: 1
+=======
+application: snakebbs
+version: 2
+>>>>>>> app,yaml version2に変更
 runtime: python
 api_version: 1
 
