@@ -1,6 +1,6 @@
 '''
 Created on 2012/07/14
-
+##Pushリクエストのテスト
 @author: dmitryshostakovich
 '''
 from google.appengine.ext.db import import djangoforms
