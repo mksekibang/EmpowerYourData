@@ -6,7 +6,6 @@ api_version: 1
 handlers:
 - url: /*
   script: helloworld.py
+  
 - url: /css
   static_dir: css
-- url: /htmldir
-  static_dir: htmldir
