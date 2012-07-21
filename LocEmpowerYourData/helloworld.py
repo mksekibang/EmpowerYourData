@@ -7,11 +7,9 @@ class MainPage(webapp.RequestHandler):
     
     
     def get(self):
-        self.layout['content'] = self.htmldir + 'write.html'
-        params = {'layout':self.layout,'form':bbsform()}
-        fpath = os.pathjoin(os.path.dirname(_file_),'layouts',self.layout_file)
-        html = template.render(fpath.params)
-        self.response.out.write(html) 
+        fpath = os.path.join(os.path.dirname(__file__),'htmldir','write.html')
+        html = template.render(fpath,None)
+        self.response.out.write(html)
 
 
 application = webapp.WSGIApplication([('/', MainPage)], debug=True)
