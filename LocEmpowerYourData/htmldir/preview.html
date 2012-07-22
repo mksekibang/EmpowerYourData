@@ -1,19 +1,20 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 	"http://www.w3.org/TR/xhtml1?DTD/xhtml1-transitional.dtd>
 <html xmlns="http:..www.w3.org/1999/xhtml">
+
 	<head>
-		<title>write form</title>
+		<title>preview form</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 			<link rel="stylesheet" tyepe="text/css" href="/css/mystyle.css" />
 	</head>
 	<body>
-		<table>
-			<td>
-			<form method ="post" action="/preview">
-			{{form}}
-			<input type ="submit" value ="プレビュー"/>
-			</form>
-			</td>
-		</table>
+		<form method ="post" action="/">
+			<table>
+				<tr><td>名前：{{ name|escape }}</td></tr>
+				<tr><td>メールアドレス：{{ mail|escape }}</td></tr>
+				<tr><td>タイトル：{{ title|escape }}</td></tr>
+				<tr><td>メモ：{{ memo|escape }}</td></tr>
+			</table>
+		</form>
 	</body>
 </html>
