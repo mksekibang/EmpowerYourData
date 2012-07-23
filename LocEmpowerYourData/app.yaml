@@ -1,11 +1,14 @@
-application: snakebbss
-version: 2
+application: snakebbs
+version: 1
 runtime: python
 api_version: 1
 
 handlers:
-- url: /.*
+- url: /
   script: helloworld.py
-  
+
+- url: /preview
+  script: preview.py
+
 - url: /css
   static_dir: css
