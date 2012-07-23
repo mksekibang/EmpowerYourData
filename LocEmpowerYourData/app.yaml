@@ -1,16 +1,14 @@
-<<<<<<< HEAD
-application: snakebbss
-version: 1
-=======
 application: snakebbs
-version: 2
->>>>>>> app,yaml version2に変更
+version: 1
 runtime: python
 api_version: 1
 
 handlers:
-- url: /.*
+- url: /
   script: helloworld.py
-  
+
+- url: /preview
+  script: preview.py
+
 - url: /css
   static_dir: css
