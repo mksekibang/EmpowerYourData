@@ -1,25 +1,13 @@
-'''
-Created on 2012/07/14
-##Pushリクエストのテスト
-@author: dmitryshostakovich
-'''
-from google.appengine.ext.db import import djangoforms
-
-class bbsform(djangoforms.ModelForm):
-    '''
-    bbsのform
-    '''
-    model = bbsdata
+#!-*- coding:utf-8 -*-"
+from google.appengine.ext import db
+from google.appengine.ext.db import djangoforms
 
 class bbsdata(db.Model):
-    name = db.StringProperty(required=True,multiline=False,verbose_name='名前')
-    mail = db.StringProperty(multiline=False,verbose_name='メール')
-    title = db.StringProperty(multiline=False,verbose_name='タイトル')
-    memo = db.StringProperty(multiline=True,required=True,verbose_name='投稿欄')
+    name = db.StringProperty(required=True,multiline=False,verbose_name='蜷榊燕')
+    mail = db.StringProperty(multiline=False,verbose_name='繝｡繝ｼ繝ｫ繧｢繝峨Ξ繧ｹ')
+    title = db.StringProperty(multiline=False,verbose_name='繧ｿ繧､繝医Ν')
+    memo = db.StringProperty(multiline=True,required=True,verbose_name='蜀�螳ｹ')
 
-
-    def __init__(selfparams):
-        '''
-        Constructor
-        '''
-        
+class bbsform(djangoforms.ModelForm):
+    class Meta:
+        model = bbsdata
