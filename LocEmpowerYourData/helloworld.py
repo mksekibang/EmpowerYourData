@@ -8,13 +8,15 @@ import bbsdata
 class MainPage(webapp.RequestHandler):
     
     def get(self):
-        params = {'form':bbsdata.bbsform()}
+        params = {
+            'form':bbsdata.bbsform()
+        }
         fpath = os.path.join(os.path.dirname(__file__),'htmldir','write.html')
         html = template.render(fpath,params)
         self.response.out.write(html)
 
+application = webapp.WSGIApplication([('/', MainPage)], debug=True)
 def main():
-    application = webapp.WSGIApplication([('/', MainPage)], debug=True)
     run_wsgi_app(application)
 
 if __name__ == "__main__":
