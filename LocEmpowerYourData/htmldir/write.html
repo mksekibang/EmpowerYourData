@@ -7,14 +7,23 @@
 			<link rel="stylesheet" type="text/css" href="/css/mystyle.css" />
 	</head>
 	<body>
-		<table>
-			<td>
-			<form method ="post" action="/preview">
-			{{form}}
-			<input type ="submit" value ="プレビュー"/>
-			</form>
-			</td>
-		</table>
+		<h1>{{errors}}</h1>
+		<form action="/" method="post">
+    	{% for field in form %}
+        <div class="fieldWrapper">
+        <table/>
+        <tr>
+            <td>{{ field.label_tag }}: </td>
+            <td>{{ field.errors }}</td>
+        </tr>
+        <tr>
+        	<td>{{ field }}</td>
+        </tr>
+        </table>
+        </div>
+    	{% endfor %}
+    	<p><input type="submit" value="プレビュー" /></p>
+		</form>
 		{% for bbsdata in bbsdatas %}
 			<blockquote>
 				名前：{{bbsdata.name|escape}} メール： {{bbsdata.mail|escape}}

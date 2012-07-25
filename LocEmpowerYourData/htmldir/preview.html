@@ -7,14 +7,16 @@
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 			<link rel="stylesheet" type="text/css" href="/css/mystyle.css" />
 	</head>
+	<h1>この内容で書きこみますか？</h2>
 	<body>
 		<form method ="post" action="/">
 			<table>
-				<tr><td>名前：{{ name|escape }}</td></tr>
-				<tr><td>メールアドレス：{{ mail|escape }}</td></tr>
-				<tr><td>タイトル：{{ title|escape }}</td></tr>
-				<tr><td>メモ：{{ memo|escape }}</td></tr>
+				<tr><td>名前：{{ name }}</td></tr>
+				<tr><td>メールアドレス：{{ mail }}</td></tr>
+				<tr><td>タイトル：{{ title }}</td></tr>
+				<tr><td>メモ：{{ memo }}</td></tr>
 			</table>
+		<input type="submit" value="書き込み" /></p>
 		</form>
 	</body>
 </html>
