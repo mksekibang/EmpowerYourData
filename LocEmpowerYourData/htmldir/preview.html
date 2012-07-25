@@ -5,7 +5,7 @@
 	<head>
 		<title>preview form</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			<link rel="stylesheet" tyepe="text/css" href="/css/mystyle.css" />
+			<link rel="stylesheet" type="text/css" href="/css/mystyle.css" />
 	</head>
 	<body>
 		<form method ="post" action="/">
@@ -15,11 +15,6 @@
 				<tr><td>タイトル：{{ title|escape }}</td></tr>
 				<tr><td>メモ：{{ memo|escape }}</td></tr>
 			</table>
-			{% for bbsdata in bbsdatas %}
-				<blockquote>
-					名前：{{bbsdata.name|escape}}
-				</blockquote>
-			{% endfor %}
 		</form>
 	</body>
 </html>
