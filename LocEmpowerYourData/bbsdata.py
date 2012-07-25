@@ -8,6 +8,12 @@ class bbsdata(db.Model):
     title = db.StringProperty(multiline=False,verbose_name='タイトル')
     memo = db.StringProperty(multiline=True,required=True,verbose_name='内容')
 
+class bbsdata2(db.Model):
+    name = db.StringProperty(multiline=False)
+    mail = db.StringProperty(multiline=False)
+    title = db.StringProperty(multiline=False)
+    memo = db.StringProperty(multiline=True)
+
 class bbsform(djangoforms.ModelForm):
     class Meta:
         model = bbsdata

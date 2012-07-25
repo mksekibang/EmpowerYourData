@@ -4,7 +4,7 @@
 	<head>
 		<title>write form</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-			<link rel="stylesheet" tyepe="text/css" href="/css/mystyle.css" />
+			<link rel="stylesheet" type="text/css" href="/css/mystyle.css" />
 	</head>
 	<body>
 		<table>
@@ -15,5 +15,12 @@
 			</form>
 			</td>
 		</table>
+		{% for bbsdata in bbsdatas %}
+			<blockquote>
+				名前：{{bbsdata.name|escape}} メール： {{bbsdata.mail|escape}}
+				タイトル：{{bbsdata.title|escape}} 
+				内容： {{bbsdata.memo|escape}}
+			</blockquote>
+		{% endfor %}			
 	</body>
 </html>
