@@ -5,16 +5,19 @@ from google.appengine.ext.webapp import template
 import os
 import bbsdata
 
-class PreviewPage(webapp.RequestHandler):
+class BBSWrite(webapp.RequestHandler):
     def post(self):
 ##
-## 書き込み処理を書く
-##
+## 書き込み処理
+        bd = bbsdata.bbsdata(
+            name = self.request.get('name'),
+            mail = self.request.get('mail'),
+            title = self.request.get('title'),
+            memo = self.request.get('memo'))
+        bd.put()
+        self.redirect("/")
 
-        fpath = os.path.join(os.path.dirname(__file__),'htmldir', 'preview.html')
-        self.response.out.write(template.render(fpath, template_values))
-
-application = webapp.WSGIApplication([('/preview', PreviewPage)], debug=True)
+application = webapp.WSGIApplication([('/write', BBSWrite)], debug=True)
 
 def main():
     run_wsgi_app(application)

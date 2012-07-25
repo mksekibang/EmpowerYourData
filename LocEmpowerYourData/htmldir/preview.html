@@ -9,14 +9,18 @@
 	</head>
 	<h1>この内容で書きこみますか？</h2>
 	<body>
-		<form method ="post" action="/">
-			<table>
-				<tr><td>名前：{{ name }}</td></tr>
-				<tr><td>メールアドレス：{{ mail }}</td></tr>
-				<tr><td>タイトル：{{ title }}</td></tr>
-				<tr><td>メモ：{{ memo }}</td></tr>
-			</table>
-		<input type="submit" value="書き込み" /></p>
+		<table>
+			<tr><td>名前：{{ name }}</td></tr>
+			<tr><td>メールアドレス：{{ mail }}</td></tr>
+			<tr><td>タイトル：{{ title }}</td></tr>
+			<tr><td>メモ：{{ memo }}</td></tr>
+		</table>
+		<form action="/write" method="post">
+			<input type="hidden" name="name" value="{{ name }}"/>
+			<input type="hidden" name="mail" value="{{ mail }}"/>
+			<input type="hidden" name="title" value="{{ title }}"/>
+			<input type="hidden" name="memo" value="{{ memo }}"/>
+			<input type="submit" value="書き込み" />
 		</form>
 	</body>
 </html>

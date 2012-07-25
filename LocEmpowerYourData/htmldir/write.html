@@ -10,16 +10,16 @@
 		<h1>{{errors}}</h1>
 		<form action="/" method="post">
     	{% for field in form %}
-        <div class="fieldWrapper">
-        <table/>
-        <tr>
-            <td>{{ field.label_tag }}: </td>
-            <td>{{ field.errors }}</td>
-        </tr>
-        <tr>
-        	<td>{{ field }}</td>
-        </tr>
-        </table>
+	        <div class="fieldWrapper">
+	        <table/>
+	        <tr>
+	            <td>{{ field.label_tag }}: </td>
+	            <td>{{ field.errors }}</td>
+	        </tr>
+	        <tr>
+	        	<td>{{ field }}</td>
+	        </tr>
+	        </table>
         </div>
     	{% endfor %}
     	<p><input type="submit" value="プレビュー" /></p>

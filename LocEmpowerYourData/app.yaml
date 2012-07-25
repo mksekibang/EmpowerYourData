@@ -7,7 +7,7 @@ handlers:
 - url: /
   script: helloworld.py
 
-- url: /preview
+- url: /write
   script: preview.py
 
 - url: /css
